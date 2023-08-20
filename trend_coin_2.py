@@ -52,6 +52,7 @@ found_coin_trend_1 = False
 while found_coin_trend_1 == False:
     coin = volatile_df.iloc[current_trend_coin_idx]['s'][:-4]
     if coin == data['first_trend_coin']:
+        current_trend_coin_idx -= 1 
         continue
     print(f'Currently checking gor coin {coin}')
     
