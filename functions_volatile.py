@@ -34,8 +34,10 @@ def get_volatile_dataframe():
     return df_volatility
     
 
-def get_trend_coins(str_date,end_str,timeframe,client,period,atr1,in_trade_coins):
+def get_trend_coins(str_date,end_str,timeframe,client,period,atr1,in_trade_coins,coins_needed):
+
     volatile_df = get_volatile_dataframe()
+    
 
     current_trend_coin_idx = -1
     found_coin_trend_1 = False
@@ -140,5 +142,5 @@ def get_trend_coins(str_date,end_str,timeframe,client,period,atr1,in_trade_coins
     consolidation_coin = coin
     print(f'Found the consolidation coin to trade : {consolidation_coin}')
 
-
+    return 
 

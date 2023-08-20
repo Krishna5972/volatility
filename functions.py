@@ -449,7 +449,6 @@ def create_signal_df(super_df,df,coin,timeframe,atr1,period,profit,sl):
 import pickle
 
 
-# Function to save data to a .pkl file
 def save_to_pkl(data, path):
     with open(path, 'wb') as file:
         pickle.dump(data, file)
