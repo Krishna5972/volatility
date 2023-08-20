@@ -91,11 +91,6 @@ stream = f"wss://fstream.binance.com/ws/{str.lower(first_trend_coin)}usdt@kline_
 def on_message(ws, message):
     msg = json.loads(message)
     print(msg)
-    symbols = [x for x in msg if x['s'].endswith('USDT')]
-    frame = pd.DataFrame(symbols)[['E', 's', 'o', 'h', 'l', 'c']]
-    frame.E = pd.to_datetime(frame.E, unit='ms')
-    frame[['o', 'h', 'l', 'c']] = frame[['o', 'h', 'l', 'c']].astype(float)
-    print(frame)
 
 
 def on_error(ws, error):
